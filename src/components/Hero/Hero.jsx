@@ -25,6 +25,9 @@ const Hero = () => {
     const particlesRef = useRef([]);
 
     useEffect(() => {
+        // Disable particles on mobile (< 768px) to improve performance
+        if (window.innerWidth < 768) return;
+
         const initParticles = async () => {
             const { initParticlesEngine } = await import("@tsparticles/react");
             const { loadSlim } = await import("@tsparticles/slim");
