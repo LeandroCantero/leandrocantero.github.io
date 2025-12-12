@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme } from '../../context/ThemeContext';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { IoMoon, IoSunny } from 'react-icons/io5';
 import './Navigation.css';
 
@@ -13,7 +13,7 @@ const ThemeToggle = () => {
             className="theme-toggle"
             aria-label="Toggle Theme"
         >
-            <motion.div
+            <m.div
                 initial={false}
                 animate={{
                     rotate: theme === 'dark' ? 0 : 180,
@@ -26,7 +26,7 @@ const ThemeToggle = () => {
                 ) : (
                     <IoSunny size={20} style={{ color: 'var(--color-primary)' }} />
                 )}
-            </motion.div>
+            </m.div>
         </button>
     );
 };

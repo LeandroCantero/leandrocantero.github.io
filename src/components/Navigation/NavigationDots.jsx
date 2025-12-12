@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { UI_TEXT } from '../../data/resume';
 import './Navigation.css';
@@ -62,9 +62,9 @@ const NavigationDots = () => {
     return (
         <nav className="nav-dots" aria-label="Section Navigation">
             {/* Scroll Progress Line */}
-            <div className="absolute right-[5px] top-[14px] bottom-[14px] w-[2px] bg-white/10 z-0 hidden md:block" />
-            <motion.div
-                className="absolute right-[5px] top-[14px] w-[2px] bg-primary z-0 hidden md:block origin-top"
+            <div className="absolute right-[5px] top-[14px] bottom-[14px] w-[2px] bg-white/10 z-0 hidden lg:block" />
+            <m.div
+                className="absolute right-[5px] top-[14px] w-[2px] bg-primary z-0 hidden lg:block origin-top"
                 animate={{
                     height: `${(sections.findIndex(s => s.id === activeSection) / (sections.length - 1)) * 100}%`
                 }}
@@ -76,6 +76,7 @@ const NavigationDots = () => {
                     {/* Label (Tooltip style) */}
                     <span
                         className={`nav-label ${activeSection === id ? 'active' : ''}`}
+                        aria-hidden="true"
                     >
                         {label}
                     </span>

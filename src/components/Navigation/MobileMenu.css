@@ -8,6 +8,14 @@
     z-index: var(--z-overlay);
 }
 
+@media (max-width: 1024px) {
+    .mobile-nav-wrapper {
+        top: auto;
+        bottom: calc(1.5rem + env(safe-area-inset-bottom));
+        right: 1.5rem;
+    }
+}
+
 .hamburger-btn {
     width: 3rem;
     height: 3rem;
@@ -74,7 +82,7 @@ html[data-theme='light'] .mobile-menu-overlay {
 }
 
 /* Responsive Visibility */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .mobile-nav-wrapper {
         display: block;
     }

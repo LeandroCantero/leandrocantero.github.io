@@ -22,30 +22,34 @@ const Footer = lazy(() => import('./components/Footer/Footer'));
 import './index.css';
 import './styles/animations.css';
 
+import { LazyMotion, domAnimation } from "framer-motion"
+
 function AppContent() {
     useSmoothScroll();
     const { theme } = useTheme();
 
     return (
-        <div className="app">
-            <CustomCursor />
-            <ScrollToTop />
-            <NavigationDots />
-            <MobileMenu />
-            <LanguageToggle />
-            <ThemeToggle />
+        <LazyMotion features={domAnimation}>
+            <div className="app">
+                <CustomCursor />
+                <ScrollToTop />
+                <NavigationDots />
+                <MobileMenu />
+                <LanguageToggle />
+                <ThemeToggle />
 
-            <Hero />
+                <Hero />
 
-            <Suspense fallback={<LoadingFallback />}>
-                <About />
-                <Experience />
-                <Projects />
-                <Skills />
-                <Contact />
-                <Footer />
-            </Suspense>
-        </div>
+                <Suspense fallback={<LoadingFallback />}>
+                    <About />
+                    <Experience />
+                    <Projects />
+                    <Skills />
+                    <Contact />
+                    <Footer />
+                </Suspense>
+            </div>
+        </LazyMotion>
     );
 }
 

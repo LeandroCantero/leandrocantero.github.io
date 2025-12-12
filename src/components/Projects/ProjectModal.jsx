@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import './ProjectModal.css';
 
@@ -54,7 +54,7 @@ const ProjectModal = ({ project, onClose }) => {
     if (!project) return null;
 
     return (
-        <motion.div
+        <m.div
             className="modal-overlay"
             variants={backdropVariants}
             initial="hidden"
@@ -65,7 +65,7 @@ const ProjectModal = ({ project, onClose }) => {
             aria-modal="true"
             aria-labelledby="modal-title"
         >
-            <motion.div
+            <m.div
                 className="modal-content"
                 variants={modalVariants}
                 onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
@@ -145,8 +145,8 @@ const ProjectModal = ({ project, onClose }) => {
                         )} */}
                     </div>
                 </div>
-            </motion.div>
-        </motion.div>
+            </m.div>
+        </m.div>
     );
 };
 

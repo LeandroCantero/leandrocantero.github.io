@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { m, useMotionValue, useSpring } from 'framer-motion';
 import '../Navigation/Navigation.css';
 
 const CustomCursor = () => {
@@ -55,7 +55,7 @@ const CustomCursor = () => {
     }, []);
 
     return (
-        <motion.div
+        <m.div
             className="custom-cursor"
             style={{
                 translateX: cursorXSpring,

@@ -10,13 +10,13 @@
     gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .nav-dots {
         display: none;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
     .nav-dots {
         display: flex;
     }
@@ -28,6 +28,10 @@
     align-items: center;
     justify-content: flex-end;
 }
+
+/* ... existing styles ... */
+
+
 
 .nav-label {
     position: absolute;
@@ -81,7 +85,7 @@
     left: 2rem;
     /* Moved to top-left as requested */
     right: auto;
-    z-index: 50;
+    z-index: var(--z-header);
     padding: 0.75rem;
     border-radius: 9999px;
     background: var(--glass-bg);
@@ -103,6 +107,8 @@
     transform: rotate(15deg);
 }
 
+
+
 /* Custom Cursor */
 .custom-cursor {
     position: fixed;
@@ -121,5 +127,19 @@
 @media (min-width: 768px) {
     .custom-cursor {
         display: block;
+    }
+}
+
+@media (max-width: 1024px) {
+    .theme-toggle {
+        top: auto;
+        bottom: calc(1.5rem + env(safe-area-inset-bottom));
+        left: 1.5rem;
+        right: auto;
+        /* Ensure normal button shape on mobile */
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        padding: 0;
     }
 }

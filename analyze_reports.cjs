@@ -1,8 +1,7 @@
 const fs = require('fs');
 
 const files = [
-    'd:/Study/Projects/Portfolio 2025/leandrocantero.github.io-20251212T025410.json',
-    'd:/Study/Projects/Portfolio 2025/leandrocantero.github.io-20251212T025537.json'
+    '../leandrocantero.github.io_2025-12-12_03-19-23.json'
 ];
 
 let output = '';

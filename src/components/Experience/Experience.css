@@ -141,7 +141,7 @@
     }
 
     .timeline-dot {
-        left: calc(-1 * var(--space-8) - 12px) !important;
+        left: calc(var(--space-4) - var(--space-8) - 13px) !important;
         right: auto !important;
     }
 

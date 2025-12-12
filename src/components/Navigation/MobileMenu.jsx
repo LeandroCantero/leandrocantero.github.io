@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { UI_TEXT } from '../../data/resume';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -70,7 +70,7 @@ const MobileMenu = () => {
 
             <AnimatePresence>
                 {isOpen && (
-                    <motion.div
+                    <m.div
                         className="mobile-menu-overlay"
                         initial="closed"
                         animate="open"
@@ -82,17 +82,17 @@ const MobileMenu = () => {
                     >
                         <nav className="mobile-nav-links" aria-label="Mobile Links">
                             {sectionIds.map((id) => (
-                                <motion.button
+                                <m.button
                                     key={id}
                                     variants={itemVariants}
                                     onClick={() => scrollToSection(id)}
                                     className="mobile-link"
                                 >
                                     {ui.nav[id] || id}
-                                </motion.button>
+                                </m.button>
                             ))}
                         </nav>
-                    </motion.div>
+                    </m.div>
                 )}
             </AnimatePresence>
         </div>

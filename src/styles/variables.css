@@ -1,60 +1,62 @@
 :root {
-  /* ====================================
+   /* ====================================
      CUSTOM LUXURY PALETTE (Gold & Graphite)
      ==================================== */
-  --straw-yellow: #EFD395;
-  --rainy-grey: #A4A4A4;
-  --steel-wool: #777674;
-  --private-black: #4B4A48;
-  --nero: #262625;
-  --cursed-black: #131313;
-  --obsidian-black: #080808;
-  /* Darker than Cursed Black */
+   --straw-yellow: #EFD395;
+   --rainy-grey: #B3B3B3;
+   /* Lightened from #A4A4A4 for AA compliance */
+   --steel-wool: #8E8D8A;
+   /* Lightened from #777674 */
+   --private-black: #4B4A48;
+   --nero: #262625;
+   --cursed-black: #131313;
+   --obsidian-black: #080808;
+   /* Darker than Cursed Black */
 
-  --pure-white: #ffffff;
-  /* Retained for text contrast */
+   --pure-white: #ffffff;
+   /* Retained for text contrast */
 
-  /* Semantic Mapping */
-  --color-bg-primary: var(--obsidian-black);
-  /* #080808 */
-  --color-bg-secondary: var(--nero);
-  /* #262625 */
-  --color-bg-tertiary: var(--private-black);
-  /* #4B4A48 */
+   /* Semantic Mapping */
+   --color-bg-primary: var(--obsidian-black);
+   /* #080808 */
+   --color-bg-secondary: var(--nero);
+   /* #262625 */
+   --color-bg-tertiary: var(--private-black);
+   /* #4B4A48 */
 
-  --color-primary: var(--straw-yellow);
-  /* #EFD395 */
-  --color-primary-rgb: 239, 211, 149;
-  /* RGB values for rgba() usage */
-  --color-primary-light: #f3e0b5;
-  /* Lighter variation for gradients */
-  --color-primary-dark: #d4b570;
-  /* Darker gold */
+   --color-primary: var(--straw-yellow);
+   /* #EFD395 */
+   --color-primary-rgb: 239, 211, 149;
+   /* RGB values for rgba() usage */
+   --color-primary-light: #f3e0b5;
+   /* Lighter variation for gradients */
+   --color-primary-dark: #d4b570;
+   /* Darker gold */
 
-  --color-text-primary: var(--pure-white);
-  --color-text-secondary: var(--rainy-grey);
-  /* #A4A4A4 */
-  --color-text-tertiary: var(--steel-wool);
-  /* #777674 */
+   --color-text-primary: var(--pure-white);
+   --color-text-secondary: var(--rainy-grey);
+   /* #A4A4A4 */
+   --color-text-tertiary: var(--steel-wool);
+   /* #777674 */
 
-  --color-text-on-primary: var(--cursed-black);
+   --color-text-on-primary: var(--cursed-black);
 
-  --color-border: rgba(119, 118, 116, 0.3);
-  /* Steel Wool with opacity */
+   --color-border: rgba(142, 141, 138, 0.5);
+   /* Steel Wool (lightened) with higher opacity for UI visibility */
 
-  /* Glass */
-  --color-glass-bg: rgba(19, 19, 19, 0.8);
-  --glass-bg: rgba(19, 19, 19, 0.85);
-  --glass-border: rgba(239, 211, 149, 0.15);
-  /* Gold tint border */
+   /* Glass */
+   --color-glass-bg: rgba(19, 19, 19, 0.8);
+   --glass-bg: rgba(19, 19, 19, 0.85);
+   --glass-border: rgba(239, 211, 149, 0.15);
+   /* Gold tint border */
 
-  --shadow-color: rgba(0, 0, 0, 0.5);
+   --shadow-color: rgba(0, 0, 0, 0.5);
 
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--straw-yellow) 0%, #d4b570 100%);
-  --gradient-secondary: linear-gradient(135deg, var(--nero) 0%, var(--private-black) 100%);
-  --gradient-hero: linear-gradient(180deg, var(--cursed-black) 0%, var(--nero) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--private-black) 0%, #000000 100%);
+   /* Gradients */
+   --gradient-primary: linear-gradient(135deg, var(--straw-yellow) 0%, #d4b570 100%);
+   --gradient-secondary: linear-gradient(135deg, var(--nero) 0%, var(--private-black) 100%);
+   --gradient-hero: linear-gradient(180deg, var(--cursed-black) 0%, var(--nero) 100%);
+   --gradient-accent: linear-gradient(135deg, var(--private-black) 0%, #000000 100%);
 }
 
 /* ====================================
@@ -95,238 +97,238 @@
   ==================================== */
 
 html[data-theme='light'] {
-  /* ====================================
+   /* ====================================
        STRICT LIGHT MODE PALETTE
        ==================================== */
-  --bright-snow: #f8f9fa;
-  --platinum: #e9ecef;
-  --alabaster-grey: #dee2e6;
-  --pale-slate: #ced4da;
-  --pale-slate-2: #adb5bd;
-  --slate-grey: #6c757d;
-  --iron-grey: #495057;
-  --gunmetal: #343a40;
-  --carbon-black: #212529;
+   --bright-snow: #f8f9fa;
+   --platinum: #e9ecef;
+   --alabaster-grey: #dee2e6;
+   --pale-slate: #ced4da;
+   --pale-slate-2: #adb5bd;
+   --slate-grey: #6c757d;
+   --iron-grey: #495057;
+   --gunmetal: #343a40;
+   --carbon-black: #212529;
 
-  /* Semantic Mapping - LIGHT MODE ONLY */
-  /* DO NOT USE variables from :root scope if they are dark-mode specific */
+   /* Semantic Mapping - LIGHT MODE ONLY */
+   /* DO NOT USE variables from :root scope if they are dark-mode specific */
 
-  --color-bg-primary: var(--bright-snow);
-  --color-bg-secondary: var(--platinum);
-  --color-bg-tertiary: var(--alabaster-grey);
+   --color-bg-primary: var(--bright-snow);
+   --color-bg-secondary: var(--platinum);
+   --color-bg-tertiary: var(--alabaster-grey);
 
-  /* Primary Action Color: Using Carbon Black/Gunmetal since Orange is separate */
-  --color-primary: var(--carbon-black);
-  --color-primary-rgb: 33, 37, 41;
-  --color-primary-light: var(--gunmetal);
-  --color-primary-dark: #000000;
+   /* Primary Action Color: Using Carbon Black/Gunmetal since Orange is separate */
+   --color-primary: var(--carbon-black);
+   --color-primary-rgb: 33, 37, 41;
+   --color-primary-light: var(--gunmetal);
+   --color-primary-dark: #000000;
 
-  --color-text-primary: var(--carbon-black);
-  --color-text-secondary: var(--iron-grey);
-  --color-text-tertiary: var(--slate-grey);
+   --color-text-primary: var(--carbon-black);
+   --color-text-secondary: var(--iron-grey);
+   --color-text-tertiary: var(--slate-grey);
 
-  --color-text-on-primary: #ffffff;
-  /* Text on Black button */
+   --color-text-on-primary: #ffffff;
+   /* Text on Black button */
 
-  --color-border: var(--pale-slate);
+   --color-border: var(--pale-slate);
 
-  /* Improved Light Mode Glass */
-  --color-glass-bg: rgba(255, 255, 255, 0.95);
-  /* Solid white for readability */
-  --glass-bg: rgba(255, 255, 255, 0.9);
-  /* High opacity glass */
-  --glass-border: rgba(33, 37, 41, 0.15);
-  /* More visible border */
+   /* Improved Light Mode Glass */
+   --color-glass-bg: rgba(255, 255, 255, 0.95);
+   /* Solid white for readability */
+   --glass-bg: rgba(255, 255, 255, 0.9);
+   /* High opacity glass */
+   --glass-border: rgba(33, 37, 41, 0.15);
+   /* More visible border */
 
-  --shadow-color: rgba(33, 37, 41, 0.15);
-  /* Stronger shadow */
+   --shadow-color: rgba(33, 37, 41, 0.15);
+   /* Stronger shadow */
 
-  --color-accent: var(--pale-slate);
-  --color-accent-light: var(--platinum);
-  --color-accent-dark: var(--pale-slate-2);
+   --color-accent: var(--pale-slate);
+   --color-accent-light: var(--platinum);
+   --color-accent-dark: var(--pale-slate-2);
 
-  /* Gradients (Light Mode - Strictly using light palette) */
-  --gradient-primary: linear-gradient(135deg, var(--carbon-black) 0%, var(--gunmetal) 100%);
-  --gradient-secondary: linear-gradient(135deg, var(--platinum) 0%, var(--alabaster-grey) 100%);
-  --gradient-hero: linear-gradient(180deg, var(--bright-snow) 0%, var(--platinum) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--pale-slate) 0%, var(--platinum) 100%);
+   /* Gradients (Light Mode - Strictly using light palette) */
+   --gradient-primary: linear-gradient(135deg, var(--carbon-black) 0%, var(--gunmetal) 100%);
+   --gradient-secondary: linear-gradient(135deg, var(--platinum) 0%, var(--alabaster-grey) 100%);
+   --gradient-hero: linear-gradient(180deg, var(--bright-snow) 0%, var(--platinum) 100%);
+   --gradient-accent: linear-gradient(135deg, var(--pale-slate) 0%, var(--platinum) 100%);
 
-  /* Glow Effects (Light Mode - Neutral/Dark shadows instead of colors) */
-  --glow-primary: 0 5px 20px rgba(33, 37, 41, 0.25);
-  /* Dark shadow for primary elements */
-  --glow-secondary: 0 5px 20px rgba(108, 117, 125, 0.2);
-  /* Softer shadow */
-  --glow-accent: 0 0 20px rgba(0, 0, 0, 0.05);
+   /* Glow Effects (Light Mode - Neutral/Dark shadows instead of colors) */
+   --glow-primary: 0 5px 20px rgba(33, 37, 41, 0.25);
+   /* Dark shadow for primary elements */
+   --glow-secondary: 0 5px 20px rgba(108, 117, 125, 0.2);
+   /* Softer shadow */
+   --glow-accent: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
 :root {
-  /* ====================================
+   /* ====================================
 
      TYPOGRAPHY
      ==================================== */
 
-  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-family-display: 'Playfair Display', serif;
+   --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+   --font-family-display: 'Playfair Display', serif;
 
-  /* Font Sizes */
-  --font-size-xs: 0.75rem;
-  /* 12px */
-  --font-size-sm: 0.875rem;
-  /* 14px */
-  --font-size-base: 1rem;
-  /* 16px */
-  --font-size-lg: 1.125rem;
-  /* 18px */
-  --font-size-xl: 1.25rem;
-  /* 20px */
-  --font-size-2xl: 1.5rem;
-  /* 24px */
-  --font-size-3xl: 1.875rem;
-  /* 30px */
-  --font-size-4xl: 2.25rem;
-  /* 36px */
-  --font-size-5xl: 3rem;
-  /* 48px */
-  --font-size-6xl: 3.75rem;
-  /* 60px */
-  --font-size-7xl: 4.5rem;
-  /* 72px */
-  --font-size-8xl: 6rem;
-  /* 96px */
+   /* Font Sizes */
+   --font-size-xs: 0.75rem;
+   /* 12px */
+   --font-size-sm: 0.875rem;
+   /* 14px */
+   --font-size-base: 1rem;
+   /* 16px */
+   --font-size-lg: 1.125rem;
+   /* 18px */
+   --font-size-xl: 1.25rem;
+   /* 20px */
+   --font-size-2xl: 1.5rem;
+   /* 24px */
+   --font-size-3xl: 1.875rem;
+   /* 30px */
+   --font-size-4xl: 2.25rem;
+   /* 36px */
+   --font-size-5xl: 3rem;
+   /* 48px */
+   --font-size-6xl: 3.75rem;
+   /* 60px */
+   --font-size-7xl: 4.5rem;
+   /* 72px */
+   --font-size-8xl: 6rem;
+   /* 96px */
 
-  /* Font Weights */
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
+   /* Font Weights */
+   --font-weight-light: 300;
+   --font-weight-normal: 400;
+   --font-weight-medium: 500;
+   --font-weight-semibold: 600;
+   --font-weight-bold: 700;
+   --font-weight-extrabold: 800;
 
-  /* Line Heights */
-  --line-height-tight: 1.2;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.6;
-  --line-height-loose: 1.8;
+   /* Line Heights */
+   --line-height-tight: 1.2;
+   --line-height-normal: 1.5;
+   --line-height-relaxed: 1.6;
+   --line-height-loose: 1.8;
 
-  /* ====================================
+   /* ====================================
      SPACING SYSTEM (8px base)
      ==================================== */
 
-  --space-1: 0.5rem;
-  /* 8px */
-  --space-2: 1rem;
-  /* 16px */
-  --space-3: 1.5rem;
-  /* 24px */
-  --space-4: 2rem;
-  /* 32px */
-  --space-5: 2.5rem;
-  /* 40px */
-  --space-6: 3rem;
-  /* 48px */
-  --space-8: 4rem;
-  /* 64px */
-  --space-10: 5rem;
-  /* 80px */
-  --space-12: 6rem;
-  /* 96px */
-  --space-16: 8rem;
-  /* 128px */
-  --space-20: 10rem;
-  /* 160px */
+   --space-1: 0.5rem;
+   /* 8px */
+   --space-2: 1rem;
+   /* 16px */
+   --space-3: 1.5rem;
+   /* 24px */
+   --space-4: 2rem;
+   /* 32px */
+   --space-5: 2.5rem;
+   /* 40px */
+   --space-6: 3rem;
+   /* 48px */
+   --space-8: 4rem;
+   /* 64px */
+   --space-10: 5rem;
+   /* 80px */
+   --space-12: 6rem;
+   /* 96px */
+   --space-16: 8rem;
+   /* 128px */
+   --space-20: 10rem;
+   /* 160px */
 
-  /* ====================================
+   /* ====================================
      LAYOUT
      ==================================== */
 
-  --container-max-width: 1200px;
-  --container-padding: var(--space-4);
-  --section-padding: var(--space-16);
-  --section-padding-mobile: var(--space-8);
+   --container-max-width: 1200px;
+   --container-padding: var(--space-4);
+   --section-padding: var(--space-16);
+   --section-padding-mobile: var(--space-8);
 
-  /* ====================================
+   /* ====================================
      BORDERS & RADIUS
      ==================================== */
 
-  --border-radius-sm: 0.375rem;
-  /* 6px */
-  --border-radius-md: 0.5rem;
-  /* 8px */
-  --border-radius-lg: 0.75rem;
-  /* 12px */
-  --border-radius-xl: 1rem;
-  /* 16px */
-  --border-radius-2xl: 1.5rem;
-  /* 24px */
-  --border-radius-full: 9999px;
+   --border-radius-sm: 0.375rem;
+   /* 6px */
+   --border-radius-md: 0.5rem;
+   /* 8px */
+   --border-radius-lg: 0.75rem;
+   /* 12px */
+   --border-radius-xl: 1rem;
+   /* 16px */
+   --border-radius-2xl: 1.5rem;
+   /* 24px */
+   --border-radius-full: 9999px;
 
-  --border-width: 1px;
-  --border-width-thick: 2px;
+   --border-width: 1px;
+   --border-width-thick: 2px;
 
-  /* ====================================
+   /* ====================================
      SHADOWS & EFFECTS
      ==================================== */
 
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
-  /* Glow Effects */
-  /* Glow Effects */
-  --glow-primary: 0 0 25px rgba(239, 211, 149, 0.4);
-  /* Straw Yellow glow */
-  --glow-secondary: 0 0 25px rgba(38, 38, 37, 0.6);
-  --glow-accent: 0 0 20px rgba(255, 255, 255, 0.1);
+   /* Glow Effects */
+   /* Glow Effects */
+   --glow-primary: 0 0 25px rgba(239, 211, 149, 0.4);
+   /* Straw Yellow glow */
+   --glow-secondary: 0 0 25px rgba(38, 38, 37, 0.6);
+   --glow-accent: 0 0 20px rgba(255, 255, 255, 0.1);
 
-  /* Glassmorphism handled in Palette */
-  --glass-backdrop: blur(12px);
+   /* Glassmorphism handled in Palette */
+   --glass-backdrop: blur(12px);
 
-  /* ====================================
+   /* ====================================
      TRANSITIONS & ANIMATIONS
      ==================================== */
 
-  --transition-fast: 150ms;
-  --transition-base: 250ms;
-  --transition-slow: 350ms;
-  --transition-slower: 500ms;
+   --transition-fast: 150ms;
+   --transition-base: 250ms;
+   --transition-slow: 350ms;
+   --transition-slower: 500ms;
 
-  --ease-in: cubic-bezier(0.4, 0, 1, 1);
-  --ease-out: cubic-bezier(0, 0, 0.2, 1);
-  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+   --ease-in: cubic-bezier(0.4, 0, 1, 1);
+   --ease-out: cubic-bezier(0, 0, 0.2, 1);
+   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+   --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+   --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
 
-  /* ====================================
+   /* ====================================
      Z-INDEX LAYERS
      ==================================== */
 
-  --z-background: -1;
-  --z-base: 0;
-  --z-content: 1;
-  --z-elevated: 10;
-  --z-sticky: 100;
-  --z-header: 1000;
-  --z-overlay: 2000;
-  --z-modal: 3000;
-  --z-tooltip: 4000;
+   --z-background: -1;
+   --z-base: 0;
+   --z-content: 1;
+   --z-elevated: 10;
+   --z-sticky: 100;
+   --z-header: 1000;
+   --z-overlay: 2000;
+   --z-modal: 3000;
+   --z-tooltip: 4000;
 
-  /* ====================================
+   /* ====================================
      BREAKPOINTS (for reference in JS)
      ==================================== */
 
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
+   --breakpoint-sm: 640px;
+   --breakpoint-md: 768px;
+   --breakpoint-lg: 1024px;
+   --breakpoint-xl: 1280px;
+   --breakpoint-2xl: 1536px;
 }
 
 /* Dark mode is default, but we can add light mode support later */
 @media (prefers-color-scheme: light) {
-  /* Keep dark mode even if user prefers light */
-  /* Uncomment below to enable light mode support
+   /* Keep dark mode even if user prefers light */
+   /* Uncomment below to enable light mode support
   :root {
     --color-bg-primary: #ffffff;
     --color-bg-secondary: #f8fafc;

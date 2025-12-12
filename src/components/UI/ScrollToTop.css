@@ -36,12 +36,13 @@
     /* Enhanced Glow */
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .scroll-to-top {
-        bottom: var(--space-4);
-        right: var(--space-4);
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1rem;
+        bottom: calc(6rem + env(safe-area-inset-bottom));
+        right: 1.5rem;
+        /* Align with hamburger */
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
     }
 }

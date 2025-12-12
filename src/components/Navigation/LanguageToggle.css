@@ -42,15 +42,22 @@
     opacity: 0.3;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .language-toggle {
-        top: var(--space-4);
-        /* Align with hamburger */
-        right: 5.5rem;
-        /* Move left of hamburger (approx 88px) */
+        top: auto;
+        bottom: calc(1.5rem + env(safe-area-inset-bottom));
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
         padding: var(--space-1) var(--space-2);
         font-size: var(--font-size-xs);
         height: 3rem;
         /* Match hamburger height */
+        background: var(--glass-bg);
+        backdrop-filter: blur(12px);
+    }
+
+    .language-toggle:hover {
+        transform: translate(-50%, -2px);
     }
 }

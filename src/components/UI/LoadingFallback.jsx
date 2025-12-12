@@ -1,18 +1,18 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import './LoadingFallback.css';
 
 const LoadingFallback = () => {
     return (
         <div className="loading-fallback">
-            <motion.div
+            <m.div
                 className="loading-content"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
             >
                 {/* Animated Logo/Initials */}
-                <motion.div
+                <m.div
                     className="loading-logo"
                     animate={{
                         scale: [1, 1.1, 1],
@@ -24,12 +24,12 @@ const LoadingFallback = () => {
                     }}
                 >
                     <span className="gradient-text">LC</span>
-                </motion.div>
+                </m.div>
 
                 {/* Animated Dots */}
                 <div className="loading-dots">
                     {[0, 1, 2].map((i) => (
-                        <motion.span
+                        <m.span
                             key={i}
                             className="dot"
                             animate={{
@@ -45,7 +45,7 @@ const LoadingFallback = () => {
                         />
                     ))}
                 </div>
-            </motion.div>
+            </m.div>
         </div>
     );
 };

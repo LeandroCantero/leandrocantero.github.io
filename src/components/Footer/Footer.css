@@ -32,3 +32,11 @@
     color: var(--color-primary);
     font-weight: 500;
 }
+
+@media (max-width: 1024px) {
+    .main-footer {
+        padding-bottom: 10rem;
+        /* Clear bottom nav + back to top */
+        padding-bottom: calc(10rem + env(safe-area-inset-bottom));
+    }
+}

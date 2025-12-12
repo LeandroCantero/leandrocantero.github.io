@@ -1,9 +1,9 @@
 import React, { forwardRef } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const SectionWrapper = forwardRef(({ children, id, className, delay = 0, disableAnimation = false }, ref) => {
     return (
-        <motion.section
+        <m.section
             ref={ref}
             id={id}
             className={className}
@@ -13,7 +13,7 @@ const SectionWrapper = forwardRef(({ children, id, className, delay = 0, disable
             transition={{ duration: 0.8, delay, ease: 'easeOut' }}
         >
             {children}
-        </motion.section>
+        </m.section>
     );
 });
 

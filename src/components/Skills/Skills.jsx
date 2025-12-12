@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { RESUME_DATA, UI_TEXT } from '../../data/resume';
 import {
@@ -62,7 +62,7 @@ const Skills = () => {
             <div className="container" ref={ref}>
                 <h2 className="section-title gradient-text">{ui.sections.skills}</h2>
 
-                <motion.div
+                <m.div
                     className="skills-grid"
                     variants={containerVariants}
                     initial="hidden"
@@ -72,7 +72,7 @@ const Skills = () => {
                         const Icon = iconMap[skill] || FaDatabase;
 
                         return (
-                            <motion.div
+                            <m.div
                                 key={i}
                                 className="skill-badge glass"
                                 variants={itemVariants}
@@ -81,10 +81,10 @@ const Skills = () => {
                                     <Icon />
                                 </div>
                                 <span className="skill-name">{skill}</span>
-                            </motion.div>
+                            </m.div>
                         );
                     })}
-                </motion.div>
+                </m.div>
             </div>
         </SectionWrapper>
     );
