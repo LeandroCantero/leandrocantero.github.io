@@ -1,0 +1,61 @@
+--------------------------------------------------
+File: d:/Study/Projects/Portfolio 2025/leandrocantero.github.io-20251212T025410.json
+Form Factor: mobile
+Performance: 75
+Accessibility: 96
+SEO: 100
+Best Practices: 100
+
+--- TOP FAILING AUDITS (Performance & Accessibility) ---
+
+Category: Performance
+[0.39] First Contentful Paint
+   -> 3.4 s
+[0.65] Largest Contentful Paint
+   -> 3.5 s
+[0] Speed Index
+   -> 18.4 s
+[0] Use efficient cache lifetimes
+   -> Est savings of 210 KiB
+[0] Forced reflow
+[0.5] Improve image delivery
+   -> Est savings of 34 KiB
+[0] LCP breakdown
+[0] Network dependency tree
+[0.5] Render blocking requests
+[0.5] Minify JavaScript
+   -> Est savings of 46 KiB
+[0.5] Reduce unused JavaScript
+   -> Est savings of 235 KiB
+[0.5] Minimize main-thread work
+   -> 2.4 s
+
+Category: Accessibility
+[0] Background and foreground colors do not have a sufficient contrast ratio.
+[0] Elements with visible text labels do not have matching accessible names.
+--------------------------------------------------
+File: d:/Study/Projects/Portfolio 2025/leandrocantero.github.io-20251212T025537.json
+Form Factor: desktop
+Performance: 100
+Accessibility: 96
+SEO: 100
+Best Practices: 100
+
+--- TOP FAILING AUDITS (Performance & Accessibility) ---
+
+Category: Performance
+[0] Use efficient cache lifetimes
+   -> Est savings of 249 KiB
+[0] Forced reflow
+[0.5] Improve image delivery
+   -> Est savings of 4 KiB
+[0] Network dependency tree
+[0.5] Render blocking requests
+[0.5] Minify JavaScript
+   -> Est savings of 46 KiB
+[0.5] Reduce unused JavaScript
+   -> Est savings of 237 KiB
+
+Category: Accessibility
+[0] Background and foreground colors do not have a sufficient contrast ratio.
+[0] Elements with visible text labels do not have matching accessible names.

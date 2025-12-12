@@ -43,21 +43,23 @@ const Hero = () => {
         const ctx = gsap.context(() => {
             // Animate name with stagger letters
             const nameChars = nameRef.current.querySelectorAll('.char');
+            const isMobile = window.innerWidth < 768;
+
             gsap.fromTo(
                 nameChars,
                 {
                     opacity: 0,
-                    y: 100,
-                    rotationX: -90,
+                    y: isMobile ? 30 : 100, // Reduced distance for mobile
+                    rotationX: isMobile ? 0 : -90, // No rotation on mobile for performance
                 },
                 {
                     opacity: 1,
                     y: 0,
                     rotationX: 0,
-                    duration: 1,
-                    stagger: 0.05,
+                    duration: isMobile ? 0.6 : 1, // Faster on mobile
+                    stagger: isMobile ? 0.02 : 0.05, // Much tighter stagger on mobile
                     ease: 'back.out(1.7)',
-                    delay: 0.1, // Reduced from 0.5s
+                    delay: 0.1,
                 }
             );
 

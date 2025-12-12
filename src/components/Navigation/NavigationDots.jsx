@@ -84,7 +84,7 @@ const NavigationDots = () => {
                     <button
                         onClick={() => scrollToSection(id)}
                         className={`nav-dot ${activeSection === id ? 'active' : ''}`}
-                        aria-label={`Scroll to ${label}`}
+                        aria-label={label}
                     />
                 </div>
             ))}
