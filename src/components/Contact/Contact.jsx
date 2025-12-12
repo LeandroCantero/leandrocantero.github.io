@@ -18,25 +18,27 @@ const Contact = () => {
         e.preventDefault();
         setStatus('sending');
 
-        // REPLACE THESE WITH USER'S ACTUAL IDS
-        // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+        // EmailJS configuration using environment variables
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-        // Mock success for now since we don't have keys
-        setTimeout(() => {
-            // To enable real sending, uncomment below and comment this mock block
-            /*
-            emailjs.sendForm('service_placeholder', 'template_placeholder', form.current, 'public_key_placeholder')
-                .then((result) => {
-                    setStatus('success');
-                    form.current.reset();
-                }, (error) => {
-                    setStatus('error');
-                });
-            */
-            console.log("EmailJS would send form here");
-            setStatus('success');
-            form.current.reset();
-        }, 1500);
+        // Check if all EmailJS credentials are configured
+        if (!serviceId || !templateId || !publicKey) {
+            console.error('EmailJS credentials not configured. Please set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY in your .env file');
+            setStatus('error');
+            return;
+        }
+
+        emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+            .then((result) => {
+                console.log('Email sent successfully:', result.text);
+                setStatus('success');
+                form.current.reset();
+            }, (error) => {
+                console.error('Failed to send email:', error.text);
+                setStatus('error');
+            });
     };
 
     return (
