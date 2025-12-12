@@ -79,6 +79,8 @@ const ProjectModal = ({ project, onClose }) => {
                             src={project.image}
                             alt={project.title}
                             className="modal-image"
+                            width={project.width}
+                            height={project.height}
                         />
                     ) : (
                         <div className="w-full h-full bg-gray-800 flex items-center justify-center text-gray-500">

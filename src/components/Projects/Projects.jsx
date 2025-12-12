@@ -88,6 +88,8 @@ const ProjectCard = ({ project, onClick }) => {
                         src={project.image}
                         alt={project.title}
                         className="project-image"
+                        width={project.width}
+                        height={project.height}
                         onError={(e) => { e.target.style.display = 'none'; }}
                     />
                 )}
