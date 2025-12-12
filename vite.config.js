@@ -9,7 +9,7 @@ export default defineConfig({
         rollupOptions: {
             output: {
                 manualChunks: {
-                    'vendor-react': ['react', 'react-dom'],
+                    'vendor-react': ['react', 'react-dom', 'react-dom/client'],
                     'vendor-animations': ['framer-motion', 'gsap', '@studio-freight/lenis'],
                     'vendor-particles': ['@tsparticles/react', '@tsparticles/slim'],
                 }

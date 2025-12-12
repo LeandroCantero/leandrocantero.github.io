@@ -1,12 +1,15 @@
-import { useEffect, useRef, useState, useMemo } from 'react';
+import { useEffect, useRef, useState, useMemo, lazy, Suspense } from 'react';
 import { gsap } from 'gsap';
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
+// import Particles, { initParticlesEngine } from "@tsparticles/react"; // Moved to dynamic import
+// import { loadSlim } from "@tsparticles/slim"; // Moved to dynamic import
 import { useLanguage } from '../../context/LanguageContext';
 import { useTheme } from '../../context/ThemeContext';
 import { RESUME_DATA, UI_TEXT } from '../../data/resume';
 import { FaGithub, FaLinkedin, FaChevronDown } from 'react-icons/fa';
 import './Hero.css';
+
+// Lazy load Particles component
+const Particles = lazy(() => import("@tsparticles/react"));
 
 const Hero = () => {
     const { language } = useLanguage();
@@ -22,11 +25,16 @@ const Hero = () => {
     const particlesRef = useRef([]);
 
     useEffect(() => {
-        initParticlesEngine(async (engine) => {
-            await loadSlim(engine);
-        }).then(() => {
+        const initParticles = async () => {
+            const { initParticlesEngine } = await import("@tsparticles/react");
+            const { loadSlim } = await import("@tsparticles/slim");
+
+            await initParticlesEngine(async (engine) => {
+                await loadSlim(engine);
+            });
             setInit(true);
-        });
+        };
+        initParticles();
     }, []);
 
     useEffect(() => {
@@ -174,14 +182,16 @@ const Hero = () => {
             {/* Animated Background */}
             <div className="hero-bg">
                 {init && (
-                    <Particles
-                        id="tsparticles"
-                        particlesLoaded={async (container) => {
-                            /* console.log(container); */
-                        }}
-                        options={particlesOptions}
-                        className="absolute inset-0 z-0"
-                    />
+                    <Suspense fallback={null}>
+                        <Particles
+                            id="tsparticles"
+                            particlesLoaded={async (container) => {
+                                /* console.log(container); */
+                            }}
+                            options={particlesOptions}
+                            className="absolute inset-0 z-0"
+                        />
+                    </Suspense>
                 )}
                 <div className="gradient-orb gradient-orb-1" ref={el => particlesRef.current[0] = el}></div>
                 <div className="gradient-orb gradient-orb-2" ref={el => particlesRef.current[1] = el}></div>
