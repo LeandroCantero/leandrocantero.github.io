@@ -22,14 +22,14 @@ const Footer = lazy(() => import('./components/Footer/Footer'));
 import './index.css';
 import './styles/animations.css';
 
-import { LazyMotion, domAnimation } from "framer-motion"
+import { LazyMotion } from "framer-motion"
 
 function AppContent() {
     useSmoothScroll();
     const { theme } = useTheme();
 
     return (
-        <LazyMotion features={domAnimation}>
+        <LazyMotion features={() => import("framer-motion").then(mod => mod.domAnimation)}>
             <div className="app">
                 <CustomCursor />
                 <ScrollToTop />

@@ -10,7 +10,8 @@ export default defineConfig({
             output: {
                 manualChunks: {
                     'vendor-react': ['react', 'react-dom', 'react-dom/client'],
-                    'vendor-animations': ['framer-motion', 'gsap', '@studio-freight/lenis'],
+                    'vendor-framer': ['framer-motion'],
+                    'vendor-gsap': ['gsap', '@studio-freight/lenis'],
                     'vendor-particles': ['@tsparticles/react', '@tsparticles/slim'],
                 }
             }
