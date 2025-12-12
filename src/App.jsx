@@ -8,6 +8,7 @@ import NavigationDots from './components/Navigation/NavigationDots';
 import MobileMenu from './components/Navigation/MobileMenu';
 import CustomCursor from './components/UI/CustomCursor';
 import ScrollToTop from './components/UI/ScrollToTop';
+import LoadingFallback from './components/UI/LoadingFallback';
 import Hero from './components/Hero/Hero';
 
 // Lazy Load heavy sections
@@ -36,7 +37,7 @@ function AppContent() {
 
             <Hero />
 
-            <Suspense fallback={<div style={{ height: '100vh' }} />}>
+            <Suspense fallback={<LoadingFallback />}>
                 <About />
                 <Experience />
                 <Projects />

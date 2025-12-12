@@ -1,0 +1,50 @@
+.loading-fallback {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg-primary);
+    z-index: 9999;
+}
+
+.loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.loading-logo {
+    font-size: 4rem;
+    font-weight: var(--font-weight-extrabold);
+    font-family: var(--font-family-display);
+    letter-spacing: 0.1em;
+}
+
+.loading-dots {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    display: block;
+    box-shadow: var(--glow-primary);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+    .loading-logo,
+    .dot {
+        animation: none !important;
+    }
+}
