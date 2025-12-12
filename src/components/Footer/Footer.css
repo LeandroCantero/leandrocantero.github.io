@@ -1,0 +1,34 @@
+.main-footer {
+    padding: var(--space-8) 0 var(--space-4);
+    background: var(--color-bg-primary);
+    /* Blend with body */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    /* Ensure above particles if any */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+}
+
+.copyright {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.made-with {
+    color: var(--color-text-tertiary);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.made-with .highlight {
+    color: var(--color-primary);
+    font-weight: 500;
+}

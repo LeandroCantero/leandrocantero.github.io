@@ -1,0 +1,166 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: var(--space-4);
+}
+
+/* Modal Content Container */
+.modal-content {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-2xl);
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: var(--shadow-2xl);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Close Button */
+.modal-close-btn {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    color: var(--color-text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.modal-close-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-text-on-primary);
+    transform: rotate(90deg);
+}
+
+/* Modal Body */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+/* Modal Image Area */
+.modal-image-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border-bottom: 1px solid var(--glass-border);
+    overflow: hidden;
+}
+
+.modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Modal Text Content */
+.modal-details {
+    padding: 0 var(--space-8) var(--space-8);
+}
+
+.modal-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-4);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal-description {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-6);
+}
+
+.modal-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+}
+
+.modal-actions {
+    display: flex;
+    gap: var(--space-4);
+    margin-top: auto;
+}
+
+.modal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--border-radius-full);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.modal-btn.primary {
+    background: var(--color-primary);
+    color: var(--color-text-on-primary);
+}
+
+.modal-btn.primary:hover {
+    background: var(--color-primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.3);
+}
+
+.modal-btn.secondary {
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.modal-btn.secondary:hover {
+    background: rgba(var(--color-primary-rgb), 0.1);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .modal-image-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-details {
+        padding: 0 var(--space-4) var(--space-6);
+    }
+
+    .modal-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .modal-btn {
+        flex: 1;
+        justify-content: center;
+    }
+}

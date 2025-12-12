@@ -1,0 +1,56 @@
+.language-toggle {
+    position: fixed;
+    top: var(--space-4);
+    right: var(--space-4);
+    z-index: var(--z-header);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--border-radius-full);
+    background: var(--glass-bg);
+    border: 2px solid var(--color-primary);
+    /* Adapts to theme: Gold in dark, Carbon Black in light */
+    cursor: pointer;
+    transition: all var(--transition-base) var(--ease-out);
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-family: var(--font-family-display);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.language-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--color-primary);
+    /* Enhanced Glow */
+    background: rgba(239, 211, 149, 0.1);
+    /* Subtle tint on hover */
+}
+
+.lang-option {
+    transition: all var(--transition-base) var(--ease-out);
+    opacity: 0.5;
+}
+
+.lang-option.active {
+    opacity: 1;
+    color: var(--color-primary);
+    text-shadow: 0 0 10px var(--color-primary);
+}
+
+.separator {
+    opacity: 0.3;
+}
+
+@media (max-width: 640px) {
+    .language-toggle {
+        top: var(--space-4);
+        /* Align with hamburger */
+        right: 5.5rem;
+        /* Move left of hamburger (approx 88px) */
+        padding: var(--space-1) var(--space-2);
+        font-size: var(--font-size-xs);
+        height: 3rem;
+        /* Match hamburger height */
+    }
+}

@@ -1,0 +1,125 @@
+/* Navigation Dots */
+.nav-dots {
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .nav-dots {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-dots {
+        display: flex;
+    }
+}
+
+.nav-dot-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-label {
+    position: absolute;
+    right: 2rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    margin-right: 0.5rem;
+}
+
+.nav-dot-container:hover .nav-label,
+.nav-label.active {
+    opacity: 1;
+}
+
+.nav-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+    cursor: pointer;
+    background-color: var(--color-border);
+    /* Visible in both modes now */
+    border: 2px solid transparent;
+    /* Increase touch target/visibility */
+    padding: 0;
+}
+
+.nav-dot:hover {
+    background-color: var(--color-text-secondary);
+    /* Darker on hover */
+    transform: scale(1.1);
+}
+
+.nav-dot.active {
+    background-color: var(--color-primary);
+    transform: scale(1.25);
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 1.5rem;
+    left: 2rem;
+    /* Moved to top-left as requested */
+    right: auto;
+    z-index: 50;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--color-primary);
+    /* Solid Primary Border */
+    color: var(--color-text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(var(--color-primary-rgb), 0.1);
+    box-shadow: 0 0 15px var(--color-primary);
+    /* Enhanced Glow */
+    transform: rotate(15deg);
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    background-color: white;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .custom-cursor {
+        display: block;
+    }
+}
