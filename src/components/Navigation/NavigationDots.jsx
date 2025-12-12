@@ -60,7 +60,7 @@ const NavigationDots = () => {
     };
 
     return (
-        <div className="nav-dots">
+        <nav className="nav-dots" aria-label="Section Navigation">
             {/* Scroll Progress Line */}
             <div className="absolute right-[5px] top-[14px] bottom-[14px] w-[2px] bg-white/10 z-0 hidden md:block" />
             <motion.div
@@ -88,7 +88,7 @@ const NavigationDots = () => {
                     />
                 </div>
             ))}
-        </div>
+        </nav>
     );
 };
 

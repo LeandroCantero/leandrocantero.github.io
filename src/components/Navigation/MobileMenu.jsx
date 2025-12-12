@@ -76,8 +76,11 @@ const MobileMenu = () => {
                         animate="open"
                         exit="closed"
                         variants={menuVariants}
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label="Mobile Navigation Menu"
                     >
-                        <nav className="mobile-nav-links">
+                        <nav className="mobile-nav-links" aria-label="Mobile Links">
                             {sectionIds.map((id) => (
                                 <motion.button
                                     key={id}

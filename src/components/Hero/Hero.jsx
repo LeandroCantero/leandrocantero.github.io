@@ -4,8 +4,8 @@ import { gsap } from 'gsap';
 // import { loadSlim } from "@tsparticles/slim"; // Moved to dynamic import
 import { useLanguage } from '../../context/LanguageContext';
 import { useTheme } from '../../context/ThemeContext';
-import { RESUME_DATA, UI_TEXT } from '../../data/resume';
-import { FaGithub, FaLinkedin, FaChevronDown } from 'react-icons/fa';
+import { HERO_DATA } from '../../data/heroData';
+import { FaChevronDown } from 'react-icons/fa';
 import './Hero.css';
 
 // Lazy load Particles component
@@ -14,8 +14,7 @@ const Particles = lazy(() => import("@tsparticles/react"));
 const Hero = () => {
     const { language } = useLanguage();
     const { theme } = useTheme();
-    const data = RESUME_DATA[language];
-    const ui = UI_TEXT[language];
+    const data = HERO_DATA[language];
 
     const [init, setInit] = useState(false);
     const heroRef = useRef(null);
@@ -58,7 +57,7 @@ const Hero = () => {
                     duration: 1,
                     stagger: 0.05,
                     ease: 'back.out(1.7)',
-                    delay: 0.5,
+                    delay: 0.1, // Reduced from 0.5s
                 }
             );
 
@@ -71,7 +70,7 @@ const Hero = () => {
                     x: 0,
                     duration: 1,
                     ease: 'power3.out',
-                    delay: 1.5,
+                    delay: 0.5, // Reduced from 1.5s
                 }
             );
 
@@ -215,7 +214,7 @@ const Hero = () => {
 
             {/* Scroll Indicator */}
             <div ref={scrollIndicatorRef} className="scroll-indicator">
-                <span className="scroll-text">{ui.hero.scrollIndicator}</span>
+                <span className="scroll-text">{data.scrollIndicator}</span>
                 <FaChevronDown className="scroll-icon" />
             </div>
         </section>

@@ -61,6 +61,9 @@ const ProjectModal = ({ project, onClose }) => {
             animate="visible"
             exit="hidden"
             onClick={onClose}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
         >
             <motion.div
                 className="modal-content"
@@ -83,7 +86,11 @@ const ProjectModal = ({ project, onClose }) => {
                             height={project.height}
                         />
                     ) : (
-                        <div className="w-full h-full bg-gray-800 flex items-center justify-center text-gray-500">
+                        <div
+                            className="w-full h-full bg-gray-800 flex items-center justify-center text-gray-500"
+                            role="img"
+                            aria-label="No image available"
+                        >
                             No Image Available
                         </div>
                     )}
@@ -91,7 +98,7 @@ const ProjectModal = ({ project, onClose }) => {
 
                 {/* Content */}
                 <div className="modal-details">
-                    <h2 className="modal-title">{project.title}</h2>
+                    <h2 id="modal-title" className="modal-title">{project.title}</h2>
 
                     <div className="modal-tech-stack">
                         {project.techStack.map((tech, i) => (
