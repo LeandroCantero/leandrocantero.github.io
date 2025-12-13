@@ -35,9 +35,17 @@
     box-shadow: var(--shadow-lg);
 }
 
-.hamburger-btn:hover {
+@media (hover: hover) {
+    .hamburger-btn:hover {
+        transform: scale(1.1);
+        border-color: var(--color-primary);
+    }
+}
+
+.hamburger-btn:active {
     transform: scale(1.1);
     border-color: var(--color-primary);
+    transition: transform 0.1s;
 }
 
 .mobile-menu-overlay {
@@ -77,8 +85,16 @@ html[data-theme='light'] .mobile-menu-overlay {
     text-transform: capitalize;
 }
 
-.mobile-link:hover {
+@media (hover: hover) {
+    .mobile-link:hover {
+        color: var(--color-primary);
+    }
+}
+
+.mobile-link:active {
     color: var(--color-primary);
+    transform: scale(1);
+    transition: transform 0.1s;
 }
 
 /* Responsive Visibility */

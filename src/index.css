@@ -108,8 +108,16 @@ a {
     transition: color var(--transition-base) var(--ease-out);
 }
 
-a:hover {
+@media (hover: hover) {
+    a:hover {
+        color: var(--color-primary-light);
+    }
+}
+
+a:active {
     color: var(--color-primary-light);
+    opacity: 1;
+    transition: color 0.1s;
 }
 
 /* ====================================

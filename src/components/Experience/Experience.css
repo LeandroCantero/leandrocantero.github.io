@@ -50,9 +50,16 @@
     margin-right: 0;
 }
 
-.experience-card:hover {
+@media (hover: hover) {
+    .experience-card:hover {
+        transform: translateY(-10px);
+        /* box-shadow: var(--glow-primary); */
+    }
+}
+
+.experience-card:active {
     transform: translateY(-10px);
-    /* box-shadow: var(--glow-primary); */
+    transition: transform 0.1s;
 }
 
 /* Timeline Dot */

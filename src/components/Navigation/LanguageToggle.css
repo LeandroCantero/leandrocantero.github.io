@@ -19,13 +19,17 @@
     color: var(--color-text-secondary);
 }
 
-.language-toggle:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 15px var(--color-primary);
-    /* Enhanced Glow */
-    background: rgba(239, 211, 149, 0.1);
-    /* Subtle tint on hover */
+@media (hover: hover) {
+    .language-toggle:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 15px var(--color-primary);
+        /* Enhanced Glow */
+        background: rgba(239, 211, 149, 0.1);
+        /* Subtle tint on hover */
+    }
 }
+
+/* Global active state removed to handle individually per breakpoint due to transform conflict */
 
 .lang-option {
     transition: all var(--transition-base) var(--ease-out);
@@ -57,7 +61,14 @@
         backdrop-filter: blur(12px);
     }
 
-    .language-toggle:hover {
-        transform: translate(-50%, -2px);
+    @media (hover: hover) {
+        .language-toggle:hover {
+            transform: translate(-50%, -2px);
+        }
+    }
+
+    .language-toggle:active {
+        transform: translate(-50%, 0) scale(0.95);
+        background: rgba(var(--color-primary-rgb), 0.1);
     }
 }

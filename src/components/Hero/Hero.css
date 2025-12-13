@@ -116,12 +116,23 @@
     transition: opacity var(--transition-base) var(--ease-out);
 }
 
-.social-link:hover {
+@media (hover: hover) {
+    .social-link:hover {
+        transform: translateY(-5px) scale(1.1);
+        box-shadow: var(--glow-primary);
+    }
+
+    .social-link:hover::before {
+        opacity: 0.2;
+    }
+}
+
+.social-link:active {
     transform: translateY(-5px) scale(1.1);
     box-shadow: var(--glow-primary);
 }
 
-.social-link:hover::before {
+.social-link:active::before {
     opacity: 0.2;
 }
 
@@ -146,8 +157,16 @@
     transition: opacity var(--transition-base) var(--ease-out);
 }
 
-.scroll-indicator:hover {
+@media (hover: hover) {
+    .scroll-indicator:hover {
+        opacity: 1;
+    }
+}
+
+.scroll-indicator:active {
     opacity: 1;
+    transform: scale(0.95);
+    transition: all 0.1s;
 }
 
 .scroll-text {
@@ -239,12 +258,21 @@ html:not([data-theme='light']) .download-cv-btn {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-html body .download-cv-btn:hover {
+@media (hover: hover) {
+    html body .download-cv-btn:hover {
+        background: var(--straw-yellow);
+        color: var(--cursed-black);
+        border-color: var(--straw-yellow);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+}
+
+html body .download-cv-btn:active {
+    transform: scale(0.95);
     background: var(--straw-yellow);
     color: var(--cursed-black);
-    border-color: var(--straw-yellow);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.1s, background-color 0.1s;
 }
 
 .download-icon {
@@ -263,7 +291,15 @@ html body .download-cv-btn:hover {
     color: var(--color-text-primary);
 }
 
-[data-theme='light'] .download-cv-btn:hover {
+@media (hover: hover) {
+    [data-theme='light'] .download-cv-btn:hover {
+        background: var(--color-primary);
+        color: var(--color-text-on-primary);
+    }
+}
+
+[data-theme='light'] .download-cv-btn:active {
     background: var(--color-primary);
     color: var(--color-text-on-primary);
+    transform: scale(0.95);
 }

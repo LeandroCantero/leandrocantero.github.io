@@ -29,13 +29,25 @@
     /* Added border for definition */
 }
 
-.skill-badge:hover {
+@media (hover: hover) {
+    .skill-badge:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--glow-primary);
+        z-index: 10;
+        /* Ensure shadow is above other elements */
+        overflow: visible;
+        /* Allow shadow to spill out */
+    }
+}
+
+.skill-badge:active {
     transform: translateY(-5px);
     box-shadow: var(--glow-primary);
     z-index: 10;
-    /* Ensure shadow is above other elements */
     overflow: visible;
-    /* Allow shadow to spill out */
+    background: rgba(var(--color-primary-rgb), 0.05);
+    border-color: var(--color-primary);
+    transition: all 0.1s;
 }
 
 .skill-icon {
@@ -47,10 +59,19 @@
     transition: all var(--transition-base) var(--ease-out);
 }
 
-.skill-badge:hover .skill-icon {
+@media (hover: hover) {
+    .skill-badge:hover .skill-icon {
+        color: var(--color-secondary);
+        transform: rotateY(360deg);
+        filter: drop-shadow(0 0 15px var(--color-secondary));
+    }
+}
+
+.skill-badge:active .skill-icon {
     color: var(--color-secondary);
     transform: rotateY(360deg);
     filter: drop-shadow(0 0 15px var(--color-secondary));
+    transition: all 0.5s;
 }
 
 .skill-name {

@@ -52,9 +52,17 @@
     overflow: hidden;
 }
 
-.stat-card:hover {
+@media (hover: hover) {
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--glow-primary);
+    }
+}
+
+.stat-card:active {
     transform: translateY(-5px);
     box-shadow: var(--glow-primary);
+    transition: transform 0.1s;
 }
 
 .stat-number {
