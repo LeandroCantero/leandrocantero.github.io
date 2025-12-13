@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { m, AnimatePresence } from 'framer-motion';
-import { FaTimes, FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { useEffect } from 'react';
+import { m } from 'framer-motion';
+import { FaTimes, FaExternalLinkAlt } from 'react-icons/fa';
 import { useLanguage } from '../../context/LanguageContext';
 import { UI_TEXT } from '../../data/resume';
 import './ProjectModal.css';
@@ -135,18 +135,6 @@ const ProjectModal = ({ project, onClose }) => {
                             </a>
                         )}
 
-                        {/* Assuming there might be a github link in the future or mapping it if available */}
-                        {/* {project.github && (
-                            <a 
-                                href={project.github} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="modal-btn secondary"
-                            >
-                                <span>View Code</span>
-                                <FaGithub />
-                            </a>
-                        )} */}
                     </div>
                 </div>
             </m.div>

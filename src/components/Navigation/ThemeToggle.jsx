@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import { m } from 'framer-motion';
 import { IoMoon, IoSunny } from 'react-icons/io5';

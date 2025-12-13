@@ -17,10 +17,6 @@ const Experience = () => {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // Animate timeline line drawing (Scrub linked to scroll)
-            // Strategy: The line draws from 0% to 100% height.
-            // We want the 'tip' of the line to stay roughly in the center of the screen as we scroll.
-            // So we start when the container top hits center, and end when container bottom hits center.
             gsap.fromTo(
                 timelineRef.current,
                 { height: '0%' },
@@ -28,10 +24,10 @@ const Experience = () => {
                     height: '100%',
                     ease: 'none',
                     scrollTrigger: {
-                        trigger: sectionRef.current.querySelector('.timeline-container'), // Trigger on the container itself
-                        start: 'top 55%', // Fine-tuning: slightly closer to center to slow it down
-                        end: 'bottom 50%', // Finish when container bottom hits center screen
-                        scrub: 0.5, // Slight smoothing
+                        trigger: sectionRef.current.querySelector('.timeline-container'),
+                        start: 'top 55%',
+                        end: 'bottom 50%',
+                        scrub: 0.5,
                     },
                 }
             );
@@ -45,7 +41,7 @@ const Experience = () => {
                     card,
                     {
                         opacity: 0,
-                        x: isLeft ? -50 : 50, // Reduced distance for cleaner feeling
+                        x: isLeft ? -50 : 50,
                         scale: 0.9,
                     },
                     {
@@ -55,17 +51,16 @@ const Experience = () => {
                         duration: 0.6,
                         scrollTrigger: {
                             trigger: card,
-                            start: 'top 85%', // Cards appear just before center
+                            start: 'top 85%',
                             toggleActions: 'play none none reverse',
                         },
                     }
                 );
 
-                // Highlight dot when card is in center
                 const dot = card.querySelector('.timeline-dot');
                 ScrollTrigger.create({
                     trigger: card,
-                    start: 'top 50%', // Activate exactly when center
+                    start: 'top 50%',
                     end: 'bottom 50%',
                     onEnter: () => dot.classList.add('active'),
                     onLeave: () => dot.classList.remove('active'),

@@ -28,6 +28,9 @@
     width: 120px;
     height: 120px;
     object-fit: contain;
+}
+
+html:not([data-theme='light']) .loading-logo-image {
     filter: invert(1) brightness(2);
 }
 

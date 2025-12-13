@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { m, AnimatePresence } from 'framer-motion';
 import { FaTimes } from 'react-icons/fa';
 import './ImageModal.css';
@@ -31,14 +31,12 @@ const modalVariants = {
 };
 
 const ImageModal = ({ imageUrl, altText, onClose }) => {
-    // Close on Escape key
     useEffect(() => {
         const handleKeyDown = (e) => {
             if (e.key === 'Escape') onClose();
         };
         window.addEventListener('keydown', handleKeyDown);
 
-        // Prevent body scroll
         document.body.style.overflow = 'hidden';
 
         return () => {

@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { m } from 'framer-motion';
 
 const SectionWrapper = forwardRef(({ children, id, className, delay = 0, disableAnimation = false }, ref) => {

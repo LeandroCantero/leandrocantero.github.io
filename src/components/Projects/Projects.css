@@ -218,7 +218,6 @@
     transition: all 0.3s ease;
     padding: 0.5rem 1rem;
     border: 1px solid var(--color-border);
-    /* Added border */
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
 }
@@ -249,7 +248,6 @@
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
-        /* 1 column on mobile */
         gap: var(--space-4);
     }
 
@@ -262,7 +260,6 @@
     }
 
     .project-card {
-        /* Disable 3D tilt on mobile for better performance */
         transform: none !important;
     }
 }

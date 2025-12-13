@@ -1,4 +1,3 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import './LoadingFallback.css';
 
@@ -11,7 +10,6 @@ const LoadingFallback = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
             >
-                {/* Animated Logo/Initials */}
                 <m.div
                     className="loading-logo"
                     animate={{
@@ -26,7 +24,6 @@ const LoadingFallback = () => {
                     <img src="/favicon.svg" alt="LC Logo" className="loading-logo-image" />
                 </m.div>
 
-                {/* Animated Dots */}
                 <div className="loading-dots">
                     {[0, 1, 2].map((i) => (
                         <m.span

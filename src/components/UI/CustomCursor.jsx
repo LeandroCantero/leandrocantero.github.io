@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { m, useMotionValue, useSpring } from 'framer-motion';
 import '../Navigation/Navigation.css';
 
@@ -6,7 +6,6 @@ const CustomCursor = () => {
     const cursorX = useMotionValue(-100);
     const cursorY = useMotionValue(-100);
 
-    // Spring config for smooth "magnetic" feel
     const springConfig = { damping: 20, stiffness: 400, mass: 0.5 };
     const cursorXSpring = useSpring(cursorX, springConfig);
     const cursorYSpring = useSpring(cursorY, springConfig);
@@ -16,7 +15,6 @@ const CustomCursor = () => {
 
     useEffect(() => {
         const moveCursor = (e) => {
-            // Snappy magnetic effect or simple follow
             cursorX.set(e.clientX - 16);
             cursorY.set(e.clientY - 16);
         };

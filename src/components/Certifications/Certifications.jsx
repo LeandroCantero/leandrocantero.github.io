@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import { m, useInView, AnimatePresence } from 'framer-motion';
+import { useRef, useState } from 'react';
+import { m, useInView } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { RESUME_DATA, UI_TEXT } from '../../data/resume';
 import SectionWrapper from '../UI/SectionWrapper';

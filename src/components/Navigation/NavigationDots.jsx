@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { m } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { UI_TEXT } from '../../data/resume';

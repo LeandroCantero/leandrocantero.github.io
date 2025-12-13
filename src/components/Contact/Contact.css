@@ -1,7 +1,6 @@
 /* Main Container */
 .contact-container {
     max-width: 600px;
-    /* Focused width */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -14,7 +13,6 @@
     flex-direction: column;
     gap: 1.5rem;
     position: relative;
-    /* transition: transform 0.3s ease, box-shadow 0.3s ease; Removed hover effect on form itself to keep it stable */
 }
 
 /* Form Title within the card */
@@ -26,7 +24,6 @@
 }
 
 .contact-form.glow-hover:hover {
-    /* Subtle lift removed */
     box-shadow: var(--shadow-xl);
 }
 
@@ -47,12 +44,9 @@
 .form-input {
     width: 100%;
     padding: 1rem 1.25rem;
-    /* More comfortable padding */
     background: var(--color-bg-secondary);
-    /* Ensure visibility */
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-lg);
-    /* Softer corners */
     color: var(--color-text-primary);
     font-family: var(--font-family-primary);
     transition: all 0.3s ease;
@@ -63,8 +57,6 @@
 .form-input:focus {
     border-color: var(--color-primary);
     background: var(--color-bg-primary);
-    box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
-    /* Modern focus ring if RGB variable existed, otherwise default shadow */
     box-shadow: 0 0 15px rgba(252, 163, 17, 0.1);
 }
 
@@ -82,13 +74,10 @@
     border: none;
     border-radius: var(--border-radius-full);
     cursor: pointer;
-    /* Ensure pointer */
     font-family: var(--font-family-display);
     transition: all 0.3s ease;
     width: auto;
-    /* Not full width */
     align-self: center;
-    /* Center it */
     font-size: 1.1rem;
     display: flex;
     justify-content: center;

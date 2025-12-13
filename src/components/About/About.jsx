@@ -19,7 +19,6 @@ const About = () => {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // Reveal text content
             gsap.fromTo(
                 contentRef.current.querySelectorAll('.word'),
                 { opacity: 0.1, y: 10 },
@@ -37,7 +36,6 @@ const About = () => {
                 }
             );
 
-            // Animate stats
             statsRef.current.querySelectorAll('.stat-card').forEach((card, i) => {
                 gsap.fromTo(
                     card,
@@ -61,7 +59,6 @@ const About = () => {
                     }
                 );
 
-                // Animate numbers
                 const number = card.querySelector('.stat-number');
                 if (number) {
                     const target = parseInt(number.getAttribute('data-target'));
