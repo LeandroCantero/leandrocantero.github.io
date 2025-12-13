@@ -5,7 +5,7 @@ import { UI_TEXT } from '../../data/resume';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './MobileMenu.css';
 
-const sectionIds = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
+const sectionIds = ['home', 'about', 'experience', 'projects', 'certifications', 'skills', 'contact'];
 
 const MobileMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +27,23 @@ const MobileMenu = () => {
         const element = document.getElementById(id);
         if (element) {
             setTimeout(() => {
-                element.scrollIntoView({ behavior: 'smooth' });
+                // element.scrollIntoView({ behavior: 'smooth' });
+                // Custom scroll to handle offset
+                let headerOffset = 0;
+
+                if (id === 'contact') {
+                    headerOffset = 50;
+                } else if (id === 'skills') {
+                    headerOffset = 50;
+                }
+
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset + headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
             }, 300); // Wait for menu to close
         }
     };

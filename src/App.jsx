@@ -15,6 +15,7 @@ import Hero from './components/Hero/Hero';
 const About = lazy(() => import('./components/About/About'));
 const Experience = lazy(() => import('./components/Experience/Experience'));
 const Projects = lazy(() => import('./components/Projects/Projects'));
+const Certifications = lazy(() => import('./components/Certifications/Certifications'));
 const Skills = lazy(() => import('./components/Skills/Skills'));
 const Contact = lazy(() => import('./components/Contact/Contact'));
 const Footer = lazy(() => import('./components/Footer/Footer'));
@@ -44,6 +45,7 @@ function AppContent() {
                     <About />
                     <Experience />
                     <Projects />
+                    <Certifications />
                     <Skills />
                     <Contact />
                     <Footer />

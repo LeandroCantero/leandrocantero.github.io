@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { m, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { useLanguage } from '../../context/LanguageContext';
+import { UI_TEXT } from '../../data/resume';
 import './ProjectModal.css';
 
 const backdropVariants = {
@@ -34,6 +36,8 @@ const modalVariants = {
 };
 
 const ProjectModal = ({ project, onClose }) => {
+    const { language } = useLanguage();
+    const ui = UI_TEXT[language];
 
     // Close on Escape key
     useEffect(() => {
@@ -126,7 +130,7 @@ const ProjectModal = ({ project, onClose }) => {
                                 rel="noopener noreferrer"
                                 className="modal-btn primary"
                             >
-                                <span>Visit Project</span>
+                                <span>{ui.project.visit}</span>
                                 <FaExternalLinkAlt />
                             </a>
                         )}

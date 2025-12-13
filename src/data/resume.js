@@ -30,18 +30,20 @@ export const RESUME_DATA = {
 
         certifications: [
             {
-                title: "Microsoft Certified: Azure Data Fundamentals (DP-900)",
-                issuer: "Microsoft",
-                date: "Sep 2025",
-                description: "Foundations of relational data, NoSQL, Big Data, and AI in Azure.",
-                link: "https://learn.microsoft.com/api/credentials/share/es-es/LeandroFC/1B08B1009A7C9CE7?sharingId=3091CE62186523F0",
-            },
-            {
                 title: "Microsoft Certified: Azure Fundamentals (AZ-900)",
                 issuer: "Microsoft",
                 date: "Aug 2025",
                 description: "Fundamental understanding of core services, security, and Cloud Computing models in Azure.",
                 link: "https://learn.microsoft.com/api/credentials/share/es-es/LeandroFC/A0B5A651927C162?sharingId=3091CE62186523F0",
+                image: "/Fundamentals.jpg",
+            },
+            {
+                title: "Microsoft Certified: Azure Data Fundamentals (DP-900)",
+                issuer: "Microsoft",
+                date: "Sep 2025",
+                description: "Foundations of relational data, NoSQL, Big Data, and AI in Azure.",
+                link: "https://learn.microsoft.com/api/credentials/share/es-es/LeandroFC/1B08B1009A7C9CE7?sharingId=3091CE62186523F0",
+                image: "/Data.jpg",
             },
         ],
 
@@ -144,18 +146,20 @@ export const RESUME_DATA = {
 
         certifications: [
             {
-                title: "Microsoft Certified: Aspectos básicos de los datos de Azure (DP-900)",
-                issuer: "Microsoft",
-                date: "Sept 2025",
-                description: "Fundamentos de datos relacionales, NoSQL, Big Data y IA en Azure.",
-                link: "https://learn.microsoft.com/api/credentials/share/es-es/LeandroFC/1B08B1009A7C9CE7?sharingId=3091CE62186523F0",
-            },
-            {
                 title: "Microsoft Certified: Azure Fundamentals (AZ-900)",
                 issuer: "Microsoft",
                 date: "Agosto 2025",
                 description: "Comprensión fundamental de los servicios centrales, seguridad y modelos de Cloud Computing de Azure.",
                 link: "https://learn.microsoft.com/api/credentials/share/es-es/LeandroFC/A0B5A651927C162?sharingId=3091CE62186523F0",
+                image: "/Fundamentals.jpg",
+            },
+            {
+                title: "Microsoft Certified: Aspectos básicos de los datos de Azure (DP-900)",
+                issuer: "Microsoft",
+                date: "Sept 2025",
+                description: "Fundamentos de datos relacionales, NoSQL, Big Data y IA en Azure.",
+                link: "https://learn.microsoft.com/api/credentials/share/es-es/LeandroFC/1B08B1009A7C9CE7?sharingId=3091CE62186523F0",
+                image: "/Data.jpg",
             },
         ],
 
@@ -244,6 +248,7 @@ export const UI_TEXT = {
             scrollIndicator: "Scroll to discover my story",
             viewProjects: "View Projects",
             contactMe: "Contact Me",
+            downloadCV: "Download CV",
         },
         sections: {
             about: "About Me",
@@ -272,6 +277,7 @@ export const UI_TEXT = {
             scrollIndicator: "Scroll para descubrir mi historia",
             viewProjects: "Ver Proyectos",
             contactMe: "Contáctame",
+            downloadCV: "Descargar CV",
         },
         sections: {
             about: "Sobre mí",

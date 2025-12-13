@@ -4,7 +4,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { UI_TEXT } from '../../data/resume';
 import './Navigation.css';
 
-const sectionIds = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
+const sectionIds = ['home', 'about', 'experience', 'projects', 'certifications', 'skills', 'contact'];
 
 const NavigationDots = () => {
     const { language } = useLanguage();
@@ -55,7 +55,29 @@ const NavigationDots = () => {
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            // element.scrollIntoView({ behavior: 'smooth' });
+            // Custom scroll to handle offset
+            let headerOffset = 0;
+
+            // "Cuando toco Habilidades y/o Contactos deberia llevarme un poco mas abajo"
+            // "skills... le falta un poco mas aun"
+            if (id === 'contact') {
+                headerOffset = 100;
+            } else if (id === 'skills') {
+                headerOffset = 100; // More offset for skills
+            }
+
+            // For other sections, default behavior (0 offset or standard)
+            // The user implied "ONLY" these needed change ("debias cambiar, no todos").
+            // So for others we might not add extra offset, or keep it 0.
+
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset + headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
         }
     };
 

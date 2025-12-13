@@ -5,7 +5,8 @@ import { gsap } from 'gsap';
 import { useLanguage } from '../../context/LanguageContext';
 import { useTheme } from '../../context/ThemeContext';
 import { HERO_DATA } from '../../data/heroData';
-import { FaChevronDown } from 'react-icons/fa';
+import { UI_TEXT } from '../../data/resume';
+import { FaChevronDown, FaDownload } from 'react-icons/fa';
 import './Hero.css';
 
 // Lazy load Particles component
@@ -211,6 +212,16 @@ const Hero = () => {
                 {/* Title/About */}
                 <div ref={titleRef} className="hero-title">
                     <p className="gradient-text">{data.about}</p>
+
+                    <a
+                        href="/Leandro_Cantero_Resume.pdf"
+                        download="Leandro_Cantero_Resume.pdf"
+                        className="download-cv-btn"
+                        aria-label={UI_TEXT[language].hero.downloadCV}
+                    >
+                        {UI_TEXT[language].hero.downloadCV}
+                        <FaDownload className="download-icon" />
+                    </a>
                 </div>
             </div>
 

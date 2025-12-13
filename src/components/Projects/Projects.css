@@ -158,13 +158,13 @@
 .tech-badge {
     font-size: 0.75rem;
     padding: 0.35em 0.8em;
-    background: rgba(255, 255, 255, 0.05);
-    /* Subtle glass bg */
+    background: transparent;
+    /* Clean look by default */
     color: var(--color-text-secondary);
     border-radius: 99px;
     /* Pill shape */
     font-weight: var(--font-weight-medium);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid transparent;
     transition: all 0.3s ease;
 }
 
@@ -192,11 +192,12 @@
 }
 
 .project-btn-details {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-border);
     color: var(--color-text-primary);
     padding: 0.5rem 1rem;
-    border-radius: 8px;
+    border-radius: 20px;
+    /* Matched to Certifications */
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 500;
@@ -204,8 +205,18 @@
     backdrop-filter: blur(4px);
 }
 
+/* Light mode overrides to match Certifications */
+[data-theme='light'] .project-btn-details {
+    border-color: var(--color-text-secondary);
+    /* Darker border in light mode */
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--color-text-primary);
+}
+
 .project-btn-details:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--primary);
+    color: var(--text-on-primary, white);
+    border-color: var(--primary);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -214,27 +225,37 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--color-primary);
+    color: var(--color-text-primary);
+    /* Changed to text-primary */
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: color 0.3s ease;
-    padding: 0.5rem;
-    border-radius: 8px;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-border);
+    /* Added border */
+    background: rgba(255, 255, 255, 0.05);
+    /* Added bg */
+    border-radius: 20px;
+    /* Matched radius */
+}
+
+/* Light mode overrides */
+[data-theme='light'] .project-link {
+    border-color: var(--color-text-secondary);
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--color-text-primary);
 }
 
 .project-link:hover {
-    color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-on-primary, white);
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
 }
 
 .project-link svg {
     transition: transform 0.3s ease;
-}
-
-.project-link:hover {
-    gap: var(--space-3);
-    color: var(--color-primary-light);
 }
 
 .project-link::after {
