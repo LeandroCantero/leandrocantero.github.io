@@ -214,8 +214,8 @@ const Hero = () => {
                     <p className="gradient-text">{data.about}</p>
 
                     <a
-                        href="/Leandro_Cantero_Resume.pdf"
-                        download="Leandro_Cantero_Resume.pdf"
+                        href="/Leandro_Cantero_CV.pdf"
+                        download="Leandro_Cantero_CV.pdf"
                         className="download-cv-btn"
                         aria-label={UI_TEXT[language].hero.downloadCV}
                     >
