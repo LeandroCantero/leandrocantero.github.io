@@ -11,10 +11,10 @@ export const useSmoothScroll = () => {
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             orientation: 'vertical',
-            gestureOrientation: 'vertical', // Added back explicitly
+            gestureOrientation: 'vertical',
             smoothWheel: true,
             wheelMultiplier: 1,
-            smoothTouch: false,
+            smoothTouch: true, // Enable smooth scrolling for touch devices
             touchMultiplier: 2,
             infinite: false,
         });
