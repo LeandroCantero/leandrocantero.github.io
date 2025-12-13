@@ -19,10 +19,23 @@
 }
 
 .loading-logo {
-    font-size: 4rem;
-    font-weight: var(--font-weight-extrabold);
-    font-family: var(--font-family-display);
-    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-logo-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    filter: invert(1) brightness(2);
+}
+
+@media (max-width: 768px) {
+    .loading-logo-image {
+        width: 80px;
+        height: 80px;
+    }
 }
 
 .loading-dots {

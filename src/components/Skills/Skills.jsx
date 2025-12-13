@@ -7,6 +7,7 @@ import {
     FaDatabase
 } from 'react-icons/fa';
 import { SiSpringboot, SiDotnet, SiPostgresql } from 'react-icons/si';
+import { TbBrandCSharp } from 'react-icons/tb';
 import { VscAzure } from 'react-icons/vsc';
 import SectionWrapper from '../UI/SectionWrapper';
 import './Skills.css';
@@ -16,7 +17,7 @@ const iconMap = {
     'Node.js': FaNodeJs,
     'Java': FaJava,
     'Spring Boot': SiSpringboot,
-    'C#': SiDotnet,
+    'C#': TbBrandCSharp,
     '.NET': SiDotnet,
     'SQL': FaDatabase,
     'NoSQL': SiPostgresql,

@@ -55,7 +55,7 @@
 }
 
 .project-card:hover::before {
-    opacity: 1;
+    opacity: 0;
 }
 
 /* Border Glow Spotlight (Optional: adding a border glow via tracking) */
@@ -87,12 +87,12 @@
 }
 
 .project-card:hover::after {
-    opacity: 1;
+    opacity: 0;
 }
 
 .project-card:hover {
     border-color: var(--color-primary);
-    box-shadow: 0 10px 30px -10px rgba(var(--color-primary-rgb), 0.3);
+    /* box-shadow: 0 10px 30px -10px rgba(var(--color-primary-rgb), 0.3); */
     transform: translateY(-5px);
 }
 

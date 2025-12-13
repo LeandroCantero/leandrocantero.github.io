@@ -163,9 +163,16 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .hero {
+        padding-top: var(--space-4) !important;
+        /* Reduce top padding slightly on mobile */
+    }
+
     .hero-content {
         gap: var(--space-4);
+        transform: translateY(-10vh);
+        /* Shift content up slightly less */
     }
 
     .hero-title p {
@@ -198,7 +205,8 @@
     }
 
     .scroll-indicator {
-        bottom: var(--space-4);
+        bottom: 20vh !important;
+        /* Move scroll indicator down slightly */
     }
 }
 

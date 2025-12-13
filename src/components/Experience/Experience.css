@@ -52,7 +52,7 @@
 
 .experience-card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--glow-primary);
+    /* box-shadow: var(--glow-primary); */
 }
 
 /* Timeline Dot */

@@ -23,7 +23,7 @@ const LoadingFallback = () => {
                         ease: "easeInOut"
                     }}
                 >
-                    <span className="gradient-text">LC</span>
+                    <img src="/favicon.svg" alt="LC Logo" className="loading-logo-image" />
                 </m.div>
 
                 {/* Animated Dots */}
