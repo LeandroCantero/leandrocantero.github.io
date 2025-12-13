@@ -12,7 +12,6 @@
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    /* Indicate it's clickable */
 }
 
 .certification-card:hover {
@@ -72,17 +71,14 @@
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: auto;
-    /* Pushes button to bottom */
 }
 
 .cert-actions {
     display: flex;
     justify-content: space-between;
-    /* Split buttons */
     align-items: center;
     margin-top: 1rem;
     width: 100%;
-    /* Ensure it takes full width */
 }
 
 .cert-btn-details {
@@ -100,9 +96,9 @@
 }
 
 .cert-btn-details:hover {
-    background: var(--primary);
-    color: var(--text-on-primary, white);
-    border-color: var(--primary);
+    background: var(--color-primary);
+    color: var(--color-text-on-primary);
+    border-color: var(--color-primary);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -111,7 +107,6 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    /* Center icon */
     gap: 0.5rem;
     font-size: 0.9rem;
     color: var(--text-primary);
@@ -126,11 +121,9 @@
 
 .cert-link.icon-only {
     padding: 0.5rem;
-    /* Square aspect ratio kind of */
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    /* Circle button */
 }
 
 /* Light mode overrides */
@@ -143,9 +136,9 @@
 
 .cert-btn-details:hover,
 .cert-link:hover {
-    color: var(--text-on-primary, white);
-    background: var(--primary);
-    border-color: var(--primary);
+    color: var(--color-text-on-primary);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
     transform: translateY(-2px);
 }
 

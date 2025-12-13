@@ -75,7 +75,7 @@
 
 .submit-btn {
     margin-top: 1rem;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     background: var(--color-primary);
     color: var(--color-text-on-primary);
     font-weight: 700;
@@ -85,8 +85,10 @@
     /* Ensure pointer */
     font-family: var(--font-family-display);
     transition: all 0.3s ease;
-    width: 100%;
-    /* Full width button */
+    width: auto;
+    /* Not full width */
+    align-self: center;
+    /* Center it */
     font-size: 1.1rem;
     display: flex;
     justify-content: center;

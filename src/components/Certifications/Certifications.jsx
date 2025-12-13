@@ -83,7 +83,7 @@ const CertificationCard = ({ cert, ui, onImageClick, language }) => {
                         href={cert.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="cert-link icon-only"
+                        className="cert-link"
                         onClick={(e) => e.stopPropagation()}
                         aria-label={`${ui.project?.visit || 'View'} ${cert.title}`}
                         title={ui.project?.visit || 'View Credential'}

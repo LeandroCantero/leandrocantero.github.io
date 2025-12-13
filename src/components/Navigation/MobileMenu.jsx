@@ -27,8 +27,6 @@ const MobileMenu = () => {
         const element = document.getElementById(id);
         if (element) {
             setTimeout(() => {
-                // element.scrollIntoView({ behavior: 'smooth' });
-                // Custom scroll to handle offset
                 let headerOffset = 0;
 
                 if (id === 'contact') {
@@ -44,7 +42,7 @@ const MobileMenu = () => {
                     top: offsetPosition,
                     behavior: "smooth"
                 });
-            }, 300); // Wait for menu to close
+            }, 300);
         }
     };
 

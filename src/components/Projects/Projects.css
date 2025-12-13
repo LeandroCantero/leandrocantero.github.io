@@ -10,7 +10,6 @@
     gap: var(--space-6);
     perspective: 1000px;
     max-width: 1200px;
-    /* Increased max-width for bigger cards */
     margin: 0 auto;
 }
 
@@ -19,21 +18,15 @@
     position: relative;
     border-radius: var(--border-radius-xl);
     overflow: hidden;
-    /* Ensure spotlight doesn't overflow */
     transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
-    /* transform-style: preserve-3d; Removed to simplify stacking context for spotlight */
     cursor: pointer;
     background: var(--glass-bg);
-    /* Semantic variable */
     border: 1px solid var(--glass-border);
-    /* Semantic variable */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* Ensure uniform height for grid items */
-    /* Spotlight Effect */
 }
 
 /* Spotlight Overlay */
@@ -67,8 +60,8 @@
     right: 0;
     bottom: 0;
     border-radius: inherit;
+    border-radius: inherit;
     padding: 1px;
-    /* border width */
     background: radial-gradient(600px circle at var(--mouse-x, 0) var(--mouse-y, 0),
             rgba(255, 255, 255, 0.4),
             transparent 40%);
@@ -92,7 +85,6 @@
 
 .project-card:hover {
     border-color: var(--color-primary);
-    /* box-shadow: 0 10px 30px -10px rgba(var(--color-primary-rgb), 0.3); */
     transform: translateY(-5px);
 }
 
@@ -101,7 +93,6 @@
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
-    /* Modern 16:9 ratio */
     height: auto;
     overflow: hidden;
     background: var(--color-bg-tertiary);
@@ -134,7 +125,6 @@
 /* Project Content */
 .project-content {
     padding: var(--space-5);
-    /* Increased padding */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -159,10 +149,8 @@
     font-size: 0.75rem;
     padding: 0.35em 0.8em;
     background: transparent;
-    /* Clean look by default */
     color: var(--color-text-secondary);
     border-radius: 99px;
-    /* Pill shape */
     font-weight: var(--font-weight-medium);
     border: 1px solid transparent;
     transition: all 0.3s ease;
@@ -180,7 +168,6 @@
     color: var(--color-text-secondary);
     margin-bottom: var(--space-5);
     flex-grow: 1;
-    /* Push the link to the bottom */
 }
 
 .project-actions {
@@ -197,7 +184,6 @@
     color: var(--color-text-primary);
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    /* Matched to Certifications */
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 500;
@@ -214,9 +200,9 @@
 }
 
 .project-btn-details:hover {
-    background: var(--primary);
-    color: var(--text-on-primary, white);
-    border-color: var(--primary);
+    background: var(--color-primary);
+    color: var(--color-text-on-primary);
+    border-color: var(--color-primary);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -226,7 +212,6 @@
     align-items: center;
     gap: 0.5rem;
     color: var(--color-text-primary);
-    /* Changed to text-primary */
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
@@ -235,9 +220,7 @@
     border: 1px solid var(--color-border);
     /* Added border */
     background: rgba(255, 255, 255, 0.05);
-    /* Added bg */
     border-radius: 20px;
-    /* Matched radius */
 }
 
 /* Light mode overrides */
@@ -248,9 +231,9 @@
 }
 
 .project-link:hover {
-    color: var(--text-on-primary, white);
-    background: var(--primary);
-    border-color: var(--primary);
+    color: var(--color-text-on-primary);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
     transform: translateY(-2px);
 }
 
@@ -260,7 +243,6 @@
 
 .project-link::after {
     display: none;
-    /* Removing the underline effect for a cleaner arrow interaction */
 }
 
 /* Responsive */
