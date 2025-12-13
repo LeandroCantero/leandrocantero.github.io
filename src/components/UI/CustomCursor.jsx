@@ -52,6 +52,15 @@ const CustomCursor = () => {
         };
     }, []);
 
+    // Don't render custom cursor on touch devices
+    const [isTouch, setIsTouch] = useState(false);
+
+    useEffect(() => {
+        setIsTouch('ontouchstart' in window || navigator.maxTouchPoints > 0);
+    }, []);
+
+    if (isTouch) return null;
+
     return (
         <m.div
             className="custom-cursor"

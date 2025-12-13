@@ -7,11 +7,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const useSmoothScroll = () => {
     useEffect(() => {
+        // Detect if device supports touch (mobile/tablet)
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+        // Don't initialize Lenis on touch devices - use native scrolling instead
+        if (isTouchDevice) {
+            return;
+        }
+
         const lenis = new Lenis({
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             orientation: 'vertical',
-            gestureOrientation: 'vertical', // Added back explicitly
+            gestureOrientation: 'vertical',
             smoothWheel: true,
             wheelMultiplier: 1,
             smoothTouch: false,

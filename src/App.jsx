@@ -29,6 +29,18 @@ function AppContent() {
     useSmoothScroll();
     const { theme } = useTheme();
 
+    // Safety check: force reset body overflow after mount to clear any locks
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            document.body.style.overflow = 'auto'; // Force auto instead of unset
+            document.body.style.removeProperty('overflow'); // Also try to remove inline style
+
+            // Double check for html element
+            document.documentElement.style.overflow = 'auto';
+        }, 100);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <LazyMotion features={() => import("framer-motion").then(mod => mod.domAnimation)}>
             <div className="app">
