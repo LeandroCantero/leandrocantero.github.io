@@ -4,9 +4,9 @@ import { useLanguage } from '../../context/LanguageContext';
 import { RESUME_DATA, UI_TEXT } from '../../data/resume';
 import {
     FaReact, FaNodeJs, FaJava, FaDocker, FaGitAlt,
-    FaDatabase
+    FaDatabase, FaJs, FaHtml5, FaCss3Alt, FaRobot
 } from 'react-icons/fa';
-import { SiSpringboot, SiDotnet, SiPostgresql } from 'react-icons/si';
+import { SiSpringboot, SiDotnet, SiPostgresql, SiSubversion } from 'react-icons/si';
 import { TbBrandCSharp } from 'react-icons/tb';
 import { VscAzure } from 'react-icons/vsc';
 import SectionWrapper from '../UI/SectionWrapper';
@@ -15,15 +15,20 @@ import './Skills.css';
 const iconMap = {
     'React': FaReact,
     'Node.js': FaNodeJs,
+    'JavaScript': FaJs,
     'Java': FaJava,
     'Spring Boot': SiSpringboot,
     'C#': TbBrandCSharp,
     '.NET': SiDotnet,
+    'HTML': FaHtml5,
+    'CSS': FaCss3Alt,
     'SQL': FaDatabase,
     'NoSQL': SiPostgresql,
     'Azure': VscAzure,
     'Docker': FaDocker,
     'Git': FaGitAlt,
+    'SVN': SiSubversion,
+    'IA': FaRobot,
 };
 
 const containerVariants = {
